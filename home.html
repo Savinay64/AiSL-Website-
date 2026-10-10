@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiSL Consultancy - Value That Matters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+</head>
+
+<body>
+    <!-- LOADER ─────────────────────────────────────────────── -->
+    <div id="ld-overlay" aria-hidden="true">
+        <canvas id="ld-canvas"></canvas>
+        <div id="ld-center">
+            <div id="ld-lockup">
+                <div id="ld-brand-stage">
+                    <div id="ld-brand" aria-label="AiSL">
+                        <span id="ld-a">A</span>
+                        <span id="ld-slot"><span id="ld-slot-inner"><span class="ld-word ld-word-letter"
+                                    aria-hidden="true">i</span></span></span>
+                        <span id="ld-sl">SL</span>
+                    </div>
+                    <div id="ld-brand-final" class="wordmark" aria-hidden="true">
+                        AiSL</div>
+                </div>
+
+                <p id="ld-company">
+                    Consultancy</p>
+                <p id="ld-tagline">
+                    Value That Matters</p>
+
+                <div id="ld-bar-track" aria-hidden="true">
+                    <span id="ld-bar"></span>
+                    <span id="ld-bar-glow"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END LOADER -->
+
+    <header class="site-header" id="top">
+        <div class="container header-shell">
+            <a class="brand" href="#home" data-scroll="">
+                <span class="brand-mark">A</span>
+                <span class="brand-text">
+                    <strong><span class="wordmark">AiSL</span> Consultancy</strong>
+                    <small>Asset i Scenario Legion</small>
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="#about" data-scroll="">About</a>
+                <a href="#services" data-scroll="">Services</a>
+                <a href="#skills" data-scroll="">Skills</a>
+                <a href="#projects" data-scroll="">Projects</a>
+                <a href="#team" data-scroll="">Team</a>
+                <a href="#contact" data-scroll="">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero-section" id="home">
+            <div class="hero-canvas" id="hero-canvas" aria-hidden="true"></div>
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="section-kicker hero-eyebrow">Strategic systems with a human approach</p>
+                    <h1><span class="wordmark">AiSL</span> Consultancy<span>Value That Matters</span></h1>
+                    <p class="hero-lead">A professional consultancy focused on practical AI experiences, web
+                        development, and workflow automation designed to solve real operational needs with clarity and
+                        reliability.</p>
+                    <div class="hero-highlights" aria-label="Core capability highlights">
+                        <span>AI-guided systems</span>
+                        <span>Workflow automation</span>
+                        <span>Professional web delivery</span>
+                    </div>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#contact" data-scroll="">Start a Conversation</a>
+                        <a class="button button-secondary" href="#services" data-scroll="">Explore Expertise</a>
+                    </div>
+                    <div class="hero-trust">
+                        <div class="trust-item">
+                            <strong>Founder-led delivery</strong>
+                            <span>Direct strategy, design, and development involvement.</span>
+                        </div>
+                        <div class="trust-item">
+                            <strong>Practical AI</strong>
+                            <span>Useful systems over hype, built for actual workflows.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-aside">
+                    <article class="hero-card glass-card">
+                        <p class="card-label">Founder &amp; CEO</p>
+                        <h2>Savinay Kumar Soni</h2>
+                        <p>Student, Developer, and AI Enthusiast building structured, modern digital systems with a
+                            consultancy mindset.</p>
+                    </article>
+                    <article class="hero-card elevated-card">
+                        <p class="card-label">Consulting Focus</p>
+                        <ul class="bullet-list">
+                            <li>AI assistant workflows</li>
+                            <li>Smart scheduling systems</li>
+                            <li>Professional web experiences</li>
+                            <li>Automation for repeatable work</li>
+                        </ul>
+                    </article>
+                    <article class="hero-card small-stat-card">
+                        <div><strong>Brand Thinking</strong><span>Asset i Scenario Legion</span></div>
+                        <p>The "i" reflects intelligence, intellectual depth, innovative ideas, informative guidance,
+                            and intermediary systems that connect vision to execution.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="content-section" id="about">
+            <div class="container">
+                <div class="section-heading" data-reveal="">
+                    <p class="section-kicker">About the consultancy</p>
+                    <h2>Founder-led thinking with a clear delivery mindset</h2>
+                    <p><span class="wordmark wordmark-inline">AiSL</span> Consultancy brings a grounded, professional
+                        approach to building digital systems that are useful, readable, and aligned with real-world
+                        needs.</p>
+                </div>
+                <div class="about-grid">
+                    <article class="about-founder card" data-reveal="">
+                        <div class="founder-badge">SKS</div>
+                        <div class="founder-meta">
+                            <p class="card-label">Founder profile</p>
+                            <h3>Savinay Kumar Soni</h3>
+                            <p class="founder-role">Founder &amp; CEO</p>
+                            <ul class="inline-tags">
+                                <li>Student</li>
+                                <li>Developer</li>
+                                <li>AI Enthusiast</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="about-story card" data-reveal="">
+                        <p>Savinay Kumar Soni founded <span class="wordmark wordmark-inline">AiSL</span> Consultancy
+                            with the intention of delivering thoughtful digital work that combines technical curiosity
+                            with professional discipline.</p>
+                        <p>The consultancy is especially suited to early-stage projects, focused prototypes, and modern
+                            web experiences where clients value precision, adaptable thinking, and direct collaboration.
+                        </p>
+                    </article>
+                    <aside class="brand-principles card" data-reveal="">
+                        <p class="card-label">Brand foundation</p>
+                        <h3>Asset i Scenario Legion</h3>
+                        <p>The <span class="wordmark wordmark-inline">AiSL</span> concept represents intelligent
+                            structure and layered thinking toward systems that are informative, innovative, and
+                            practical.</p>
+                        <div class="principle-cloud">
+                            <span>Intelligence</span><span>Intellectual</span><span>Innovative</span><span>Informative</span><span>Intermediate</span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="content-section section-soft" id="services">
+            <div class="container">
+                <div class="section-heading" data-reveal="">
+                    <p class="section-kicker">Services &amp; expertise</p>
+                    <h2>Solutions designed for practical use and professional presentation</h2>
+                    <p>The work is centered on intelligent automation, lightweight web systems, and digital solutions
+                        that feel structured from day one.</p>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card card" data-reveal=""><span class="service-index">01</span>
+                        <h3>AI Assistant Development</h3>
+                        <p>Guided assistants for support, information access, user interaction, and internal workflow
+                            assistance.</p>
+                    </article>
+                    <article class="service-card card" data-reveal=""><span class="service-index">02</span>
+                        <h3>Smart Scheduling Systems</h3>
+                        <p>Structured planning tools that help organize tasks, schedules, reminders, and priority-based
+                            daily workflows.</p>
+                    </article>
+                    <article class="service-card card" data-reveal=""><span class="service-index">03</span>
+                        <h3>Web Development</h3>
+                        <p>Professional websites and focused web interfaces built for credibility, speed, and clear
+                            communication.</p>
+                    </article>
+                    <article class="service-card card" data-reveal=""><span class="service-index">04</span>
+                        <h3>Automation Solutions</h3>
+                        <p>Workflow automation that reduces repetitive effort and improves consistency across recurring
+                            digital tasks.</p>
+                    </article>
+                    <article class="service-card card" data-reveal=""><span class="service-index">05</span>
+                        <h3>Workflow Prototyping</h3>
+                        <p>Early-stage system prototypes that help validate logic, structure, and user flow before
+                            deeper implementation.</p>
+                    </article>
+                    <article class="service-card card" data-reveal=""><span class="service-index">06</span>
+                        <h3>Technical Research &amp; Documentation</h3>
+                        <p>Clear breakdowns, implementation notes, and solution mapping that support professional
+                            project planning.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="content-section" id="skills">
+            <div class="container skills-layout">
+                <div class="skills-copy" data-reveal="">
+                    <p class="section-kicker">Core skills</p>
+                    <h2>Built on applied technical ability and structured problem solving</h2>
+                    <p>The skill profile behind <span class="wordmark wordmark-inline">AiSL</span> Consultancy is
+                        focused on practical implementation, readable design decisions, and the ability to turn ideas
+                        into working systems efficiently.</p>
+                </div>
+                <div class="skills-panel card" data-reveal="">
+                    <article class="skill-item">
+                        <div class="skill-head">
+                            <h3>Python</h3><span>Strong working level</span>
+                        </div>
+                        <p>Useful for automation logic, utilities, backend tasks, and AI-related workflows.</p>
+                        <div class="skill-meter"><span class="active"></span><span class="active"></span><span
+                                class="active"></span><span class="active"></span><span></span></div>
+                    </article>
+                    <article class="skill-item">
+                        <div class="skill-head">
+                            <h3>JavaScript</h3><span>Advanced working level</span>
+                        </div>
+                        <p>Interactive frontend behavior, UI logic, and web-based feature development.</p>
+                        <div class="skill-meter"><span class="active"></span><span class="active"></span><span
+                                class="active"></span><span class="active"></span><span></span></div>
+                    </article>
+                    <article class="skill-item">
+                        <div class="skill-head">
+                            <h3>HTML &amp; CSS</h3><span>Advanced working level</span>
+                        </div>
+                        <p>Clean semantic structure, responsive design, and polished presentation.</p>
+                        <div class="skill-meter"><span class="active"></span><span class="active"></span><span
+                                class="active"></span><span class="active"></span><span class="active"></span></div>
+                    </article>
+                    <article class="skill-item">
+                        <div class="skill-head">
+                            <h3>Basic DSA</h3><span>Foundation level</span>
+                        </div>
+                        <p>Helpful for structured logic, problem decomposition, and efficient implementation.</p>
+                        <div class="skill-meter"><span class="active"></span><span class="active"></span><span
+                                class="active"></span><span></span><span></span></div>
+                    </article>
+                    <article class="skill-item">
+                        <div class="skill-head">
+                            <h3>AI Tools</h3><span>Strong working level</span>
+                        </div>
+                        <p>Assistant design, prompt structuring, and modern AI-enabled productivity systems.</p>
+                        <div class="skill-meter"><span class="active"></span><span class="active"></span><span
+                                class="active"></span><span class="active"></span><span></span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="content-section section-soft" id="projects">
+            <div class="container">
+                <div class="section-heading" data-reveal="">
+                    <p class="section-kicker">Selected projects</p>
+                    <h2>Focused examples of the solutions <span class="wordmark wordmark-inline">AiSL</span> Consultancy
+                        can deliver</h2>
+                    <p>These projects represent practical, realistic work aligned with AI assistance, scheduling
+                        intelligence, and modern digital presence.</p>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card card" data-reveal="">
+                        <p class="card-label">Project 01</p>
+                        <h3>AI Assistant</h3>
+                        <p>A structured conversational assistant designed to answer questions, guide users through
+                            tasks, and improve access to useful information.</p>
+                    </article>
+                    <article class="project-card card" data-reveal="">
+                        <p class="card-label">Project 02</p>
+                        <h3>AI Smart Scheduler</h3>
+                        <p>A scheduling concept that helps prioritize work, organize daily plans, and introduce more
+                            consistency into time management.</p>
+                    </article>
+                    <article class="project-card card" data-reveal="">
+                        <p class="card-label">Project 03</p>
+                        <h3>Professional Web Presence</h3>
+                        <p>A refined business website built to present services clearly, improve credibility, and
+                            support direct enquiries.</p>
+                    </article>
+                    <article class="project-card card" data-reveal="">
+                        <p class="card-label">Project 04</p>
+                        <h3>Workflow Automation Tracker</h3>
+                        <p>A lightweight operational system for handling recurring tasks, process visibility, and
+                            structured digital follow-through.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="content-section" id="team">
+            <div class="container">
+                <div class="section-heading" data-reveal="">
+                    <p class="section-kicker">Team</p>
+                    <h2>A strong solo foundation with room to scale thoughtfully</h2>
+                    <p>The consultancy currently operates as a focused founder-led practice, allowing for direct
+                        communication and consistent delivery standards.</p>
+                </div>
+                <div class="team-grid">
+                    <article class="team-card card" data-reveal="">
+                        <p class="card-label">Current structure</p>
+                        <h3>Solo Founder</h3>
+                        <p><span class="wordmark wordmark-inline">AiSL</span> Consultancy is presently led by Savinay
+                            Kumar Soni, who manages strategy, design thinking, development, and solution execution
+                            directly.</p>
+                    </article>
+                    <article class="team-card card" data-reveal="">
+                        <p class="card-label">Future vision</p>
+                        <h3>Selective expansion</h3>
+                        <p>As the consultancy grows, the vision is to expand with aligned collaborators in AI
+                            implementation, frontend development, research, and operational support.</p>
+                    </article>
+                    <article class="team-roadmap card" data-reveal="">
+                        <p class="card-label">Growth direction</p>
+                        <ul class="bullet-list">
+                            <li>Direct founder collaboration remains central</li>
+                            <li>Specialist partnerships can support larger scopes</li>
+                            <li>Quality and clarity stay ahead of unnecessary scale</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="content-section section-soft" id="contact">
+            <div class="container contact-layout">
+                <div class="contact-copy" data-reveal="">
+                    <p class="section-kicker">Contact</p>
+                    <h2>Start with a clear brief, and we can shape the right solution</h2>
+                    <p>If you are planning an AI assistant, a scheduling concept, a streamlined automation flow, or a
+                        professional website, use the form to begin the conversation.</p>
+                    <div class="contact-points">
+                        <div class="contact-point"><strong>Founder</strong><span>Savinay Kumar Soni, Founder &amp;
+                                CEO</span></div>
+                        <div class="contact-point"><strong>Consultancy focus</strong><span>AI systems, automation, web
+                                development, and workflow design</span></div>
+                        <div class="contact-point"><strong>Best way to begin</strong><span>Share your goals, current
+                                challenge, and the outcome you want to improve</span></div>
+                    </div>
+                </div>
+                <form class="contact-form card" id="contactForm" data-reveal="">
+                    <div class="form-row"><label for="name">Full name</label><input id="name" name="name" type="text"
+                            placeholder="Your name" required=""></div>
+                    <div class="form-row"><label for="email">Email address</label><input id="email" name="email"
+                            type="email" placeholder="your@email.com" required=""></div>
+                    <div class="form-row"><label for="role">Role or organization</label><input id="role" name="role"
+                            type="text" placeholder="Student, founder, business, or team"></div>
+                    <div class="form-row">
+                        <label for="service">Service interest</label>
+                        <select id="service" name="service" required="">
+                            <option value="">Select a service</option>
+                            <option>AI Assistant Development</option>
+                            <option>Smart Scheduling Systems</option>
+                            <option>Web Development</option>
+                            <option>Automation Solutions</option>
+                            <option>Workflow Prototyping</option>
+                            <option>Technical Research &amp; Documentation</option>
+                        </select>
+                    </div>
+                    <div class="form-row"><label for="message">Project summary</label><textarea id="message"
+                            name="message" rows="5" placeholder="Share what you want to build, improve, or automate"
+                            required=""></textarea></div>
+                    <button class="button button-primary form-submit" type="submit">Send Enquiry</button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-shell">
+            <div><strong><span class="wordmark">AiSL</span> Consultancy</strong>
+                <p>Value That Matters</p>
+            </div>
+            <p>Founder-led consultancy focused on intelligent digital systems, automation, and professional web
+                development.</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <button class="chat-toggle" id="chatToggle" type="button" aria-label="Open chatbot" aria-expanded="false">
+        <span class="chat-toggle-icon"></span><span>Chat</span>
+    </button>
+    <aside class="chat-panel" id="chatPanel" aria-label="AiSL Consultancy chatbot">
+        <div class="chat-header">
+            <div>
+                <p class="chat-title"><span class="wordmark wordmark-inline">AiSL</span> Assistant</p><span>Structured
+                    answers about the consultancy</span>
+            </div>
+            <button class="chat-close" id="chatClose" type="button" aria-label="Close chatbot">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-actions">
+            <button type="button" class="chat-chip" data-chat-topic="founder">Founder</button>
+            <button type="button" class="chat-chip" data-chat-topic="services">Services</button>
+            <button type="button" class="chat-chip" data-chat-topic="projects">Projects</button>
+            <button type="button" class="chat-chip" data-chat-topic="contact">Contact</button>
+        </div>
+        <form class="chat-form" id="chatForm">
+            <input id="chatName" type="text" placeholder="Your name" required>
+            <input id="chatEmail" type="email" placeholder="Your email" required>
+            <textarea id="chatMessage" placeholder="Your message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+        <p id="chatStatus"></p>
+    </aside>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

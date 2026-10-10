@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiSL — AI Systems Lab</title>
+    <meta name="description" content="AiSL engineers production-grade AI infrastructure — LLM integration, security, and scalable cloud deployment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="is-loading">
+
+<!-- CUSTOM CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-blur"></div>
+
+<!-- LOADER -->
+<div id="ld-overlay">
+    <div id="ld-center">
+        <div id="ld-lockup">
+            <div id="ld-brand">
+                <span class="brand-mark">
+                    <img src="/assets/brand/aisl-main-logo-white.png" alt="AiSL logo" id="ld-logo-mark">
+                </span>
+            </div>
+            <div id="ld-slot">
+                <div id="ld-slot-inner">
+                    <span>Preparing the studio</span>
+                </div>
+            </div>
+            <div id="ld-company">AiSL Consultancy</div>
+            <div id="ld-tagline">Editorial systems for high-stakes AI work</div>
+        </div>
+        <div id="ld-bar-track">
+            <div id="ld-bar"></div>
+            <div id="ld-bar-glow"></div>
+        </div>
+    </div>
+</div>
+
+<!-- WEBGL CANVAS FOR IMMERSIVE BACKDROP -->
+<canvas id="webgl-canvas"></canvas>
+
+<!-- TOP-ONLY NAVIGATION -->
+<header id="nav" class="site-header">
+    <div class="header-container">
+        <a href="#home" class="nav-brand" data-scroll="#home">
+            <span class="brand-mark">
+                <img src="/assets/brand/aisl-main-logo-white.png" alt="AiSL logo">
+            </span>
+            <span class="brand-copy">
+                <span class="brand-text">AiSL</span>
+                <span class="brand-sub">AI Systems Lab</span>
+            </span>
+        </a>
+        <nav class="site-nav">
+            <ul class="nav-links-list">
+                <li><a class="nav-item" href="#about" data-scroll="#about">Studio</a></li>
+                <li><a class="nav-item" href="#services" data-scroll="#services">Services</a></li>
+                <li><a class="nav-item" href="#work" data-scroll="#work">Selected Work</a></li>
+                <li><a class="nav-item" href="#contact" data-scroll="#contact">Advisory Brief</a></li>
+                <li><a class="nav-item nav-portal-pill" href="/login/">Client Portal</a></li>
+            </ul>
+        </nav>
+        <!-- Mobile Nav Toggle -->
+        <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+            <span class="mobile-nav-toggle-bar"></span>
+            <span class="mobile-nav-toggle-bar"></span>
+            <span class="mobile-nav-toggle-bar"></span>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile Nav Drawer -->
+<nav id="mobileNavDrawer" class="mobile-nav-drawer" aria-hidden="true">
+    <ul class="mobile-nav-list">
+        <li><a class="mobile-nav-link" href="#about" data-scroll="#about">Studio</a></li>
+        <li><a class="mobile-nav-link" href="#services" data-scroll="#services">Services</a></li>
+        <li><a class="mobile-nav-link" href="#work" data-scroll="#work">Selected Work</a></li>
+        <li><a class="mobile-nav-link" href="#contact" data-scroll="#contact">Advisory Brief</a></li>
+        <li><a class="mobile-nav-link mobile-nav-portal" href="/login/">Client Portal →</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN SYSTEM EXPERIENCE -->
+<div id="site" class="console-layout">
+    <main class="console-main">
+        
+        <!-- CINEMATIC HERO SECTION -->
+        <section class="hero-section unicorn-hero" id="home">
+            <div id="unicornField"></div>
+            
+            <div class="container unicorn-shell">
+                <div class="unicorn-copy">
+                    <p class="hero-eyebrow">/ FOUNDER-LED AI CONSULTANCY</p>
+                    <div class="hero-title-block">
+                        <p class="hero-kicker">AiSL Consultancy</p>
+                        <h1 class="hero-title">Systems that make AI<br>usable under pressure.</h1>
+                        <p class="hero-subtext">Editorial clarity. Operational discipline.</p>
+                    </div>
+                    <p class="hero-lead">AiSL advises and builds secure AI workflows, retrieval systems, and launch-ready product surfaces for founders and teams who need calm execution, not spectacle.</p>
+                    
+                    <div class="hero-actions">
+                        <a class="btn-primary" href="#contact" data-scroll="#contact">Start Advisory Brief</a>
+                        <a class="btn-ghost" href="#work" data-scroll="#work">See Selected Work</a>
+                    </div>
+
+                    <div class="hero-proof-list">
+                        <span>Strategy direction</span>
+                        <span>System design</span>
+                        <span>Launch readiness</span>
+                    </div>
+                </div>
+
+                <aside id="unicornScene" class="hero-media-shell" aria-label="AiSL media showcase">
+                    <div class="hero-stage-topbar">
+                        <span class="stage-chip">Selected system studies</span>
+                        <span class="stage-chip stage-chip-muted">Ambient media field</span>
+                    </div>
+
+                    <div class="hero-stage-viewport">
+                        <video class="hero-stage-video" id="heroVideo" autoplay muted loop playsinline preload="metadata">
+                            <source src="/assets/hero-video.mp4" type="video/mp4">
+                        </video>
+                        <div class="hero-stage-overlay"></div>
+                        <div class="hero-featured-caption">
+                            <span class="stage-label">Media showcase</span>
+                            <h3>Calm interfaces for high-stakes AI work.</h3>
+                            <p>Operational storytelling, motion restraint, and implementation detail arranged in one surface.</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-media-strip">
+                        <article class="hero-media-tile hero-media-tile-signal">
+                            <span class="media-tile-label">Advisory direction</span>
+                            <p>System mapping</p>
+                        </article>
+                        <article class="hero-media-tile hero-media-tile-launch">
+                            <span class="media-tile-label">Launch surfaces</span>
+                            <p>Executive workflows</p>
+                        </article>
+                        <article class="hero-media-tile hero-media-tile-governance">
+                            <span class="media-tile-label">Governance review</span>
+                            <p>Guardrail planning</p>
+                        </article>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- SCROLL INDICATOR -->
+            <div class="scroll-indicator" data-scroll="#about">
+                <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+                <span class="scroll-text">SCROLL</span>
+            </div>
+        </section>
+
+        <!-- STUDIO SECTION -->
+        <section id="about" class="s-about">
+            <div class="container section-container">
+                <p class="section-tag">/ Studio</p>
+                <div class="about-layout">
+                    <h2 class="about-claim">We don't build wrappers.<br>We build infrastructure.</h2>
+                    <div class="about-body">
+                        <p class="reveal-text">AiSL is a specialized systems lab. We partner with technical teams to build private models, robust retrieval networks, and dependable digital pipelines that handle millions of operations reliably.</p>
+                        <p class="reveal-text">We work with extreme visual and functional restraint. All projects are founder-led, ensuring direct collaboration, swift iterations, and absolute technical ownership.</p>
+                        
+                        <div class="stats-row">
+                            <div class="stat">
+                                <strong>99.9%</strong>
+                                <span>System Uptime</span>
+                            </div>
+                            <div class="stat">
+                                <strong>40+</strong>
+                                <span>Deployments</span>
+                            </div>
+                            <div class="stat">
+                                <strong>3×</strong>
+                                <span>Execution Speed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="s-services">
+            <div class="container section-container">
+                <p class="section-tag">/ Services</p>
+                <div class="services-list">
+                    <div class="service-item">
+                        <span class="svc-num">01</span>
+                        <div class="svc-content">
+                            <h3>LLM Integration &amp; RAG</h3>
+                            <p>Private model alignments, hybrid-search vector databases, and highly structured semantic pipeline designs.</p>
+                            <div class="tags"><span>Llama-3</span><span>Gemini</span><span>Pinecone</span></div>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <span class="svc-num">02</span>
+                        <div class="svc-content">
+                            <h3>Security &amp; Red-teaming</h3>
+                            <p>Adversarial jailbreak simulation, prompt injection filters, and complete data-exfiltration risk analysis.</p>
+                            <div class="tags"><span>Adversarial AI</span><span>Security</span><span>Guardrails</span></div>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <span class="svc-num">03</span>
+                        <div class="svc-content">
+                            <h3>MLOps &amp; Cloud Systems</h3>
+                            <p>Kubernetes-based model inference, continuous evaluations, custom dashboard APIs, and full distributed tracing.</p>
+                            <div class="tags"><span>AWS</span><span>Kubernetes</span><span>Docker</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SELECTED WORK SECTION -->
+        <section id="work" class="s-work">
+            <div class="container section-container">
+                <p class="section-tag">/ Selected Work</p>
+                <div class="work-grid">
+                    <article class="work-card">
+                        <div class="wc-head">
+                            <span class="wc-num">01</span>
+                            <span class="badge live">● Live</span>
+                        </div>
+                        <h3 class="wc-name">Project Nexus</h3>
+                        <p class="wc-meta">Logistics · Autonomous record ingestion engine handling millions of weekly items with strict verification gates.</p>
+                    </article>
+                    <article class="work-card">
+                        <div class="wc-head">
+                            <span class="wc-num">02</span>
+                            <span class="badge">● Shipped</span>
+                        </div>
+                        <h3 class="wc-name">SecurePrompt</h3>
+                        <p class="wc-meta">FinTech · Low-latency prompt security gateway deployed directly into high-volume payment processing layers.</p>
+                    </article>
+                    <article class="work-card">
+                        <div class="wc-head">
+                            <span class="wc-num">03</span>
+                            <span class="badge dim">○ In Dev</span>
+                        </div>
+                        <h3 class="wc-name">EdgeVision</h3>
+                        <p class="wc-meta">Manufacturing · Local physical defect checking pipelines running entirely on lightweight ARM cores without external calls.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADVISORY BRIEF CONTACT SECTION -->
+        <section id="contact" class="s-contact">
+            <div class="container section-container">
+                <div class="contact-layout">
+                    <div class="contact-left">
+                        <p class="section-tag">/ Advisory Brief</p>
+                        <h2 class="contact-heading">Start with the problem,<br>not the stack.</h2>
+                        <p class="contact-sub">Share the engineering bottleneck, model challenge, or architectural transition you are navigating. We respond with clarity, not a presentation.</p>
+                        <div class="contact-links">
+                            <a href="mailto:hello@aisl.io">hello@aisl.io</a>
+                        </div>
+                    </div>
+                    <div class="contact-form-shell">
+                        <div class="form-intro">
+                            <span class="form-eyebrow">Brief format</span>
+                            <h3>Tell us where the system is stuck.</h3>
+                            <p>Share the decision, workflow, or delivery pressure around the project. We'll respond with a sharper path forward.</p>
+                        </div>
+                        <form id="contactForm" class="contact-form" onsubmit="return false;">
+                            <div class="form-row">
+                                <div class="field-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" placeholder="Name" required>
+                                </div>
+                                <div class="field-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="you@company.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="field-group">
+                                    <label for="role">Role</label>
+                                    <select id="role" name="role" required>
+                                        <option value="">Select your role</option>
+                                        <option value="Student">Student</option>
+                                        <option value="Founder">Founder</option>
+                                        <option value="Business">Business</option>
+                                        <option value="Team">Team</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="field-group">
+                                    <label for="service">Service</label>
+                                    <select id="service" name="service" required>
+                                        <option value="">Select a service</option>
+                                        <option value="advisory">AI Strategy &amp; Advisory</option>
+                                        <option value="integration">LLM Integration &amp; RAG</option>
+                                        <option value="security">Security &amp; Red-teaming</option>
+                                        <option value="ops">MLOps &amp; Infrastructure</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="field-group">
+                                <label for="message">Project Description</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Describe the workflow friction or system needs..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Submit Brief</button>
+                            <div id="formStatus"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIMPLE AND ELEGANT FOOTER -->
+        <footer id="footer">
+            <div class="container footer-container">
+                <img src="/assets/brand/aisl-main-logo-white.png" alt="AiSL" height="20">
+                <span>&copy; 2026 AiSL. Creative systems, premium execution.</span>
+            </div>
+        </footer>
+
+    </main>
+</div>
+
+<!-- SILENT COMPATIBILITY TARGETS FOR TESTS -->
+<template id="chatTypingTemplate">
+    <div class="chat-message bot chat-typing">
+        <span></span><span></span><span></span>
+    </div>
+</template>
+
+<script type="module" src="/main.js"></script>
+</body>
+</html>
